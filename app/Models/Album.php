@@ -13,6 +13,9 @@ class Album extends Model
         'artist_name',
        
     ];
+    public function songs(){
+        return $this->hasMany(song::class);
+    }
 
     use HasFactory;
 }
